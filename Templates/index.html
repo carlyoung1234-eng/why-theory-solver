@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Why Theory™ Solver</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f9;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        form {
+            margin: 20px auto;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+        .result {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <h1>The Why Theory™ Solver</h1>
+    <form method="post">
+        <input type="text" name="problem" placeholder="Enter your problem here">
+        <button type="submit">Solve</button>
+    </form>
+
+    {% if result %}
+    <div class="result">
+        <h2>Result:</h2>
+        <p>{{ result }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
